@@ -1,0 +1,22 @@
+<table class="table table-striped item active table-condensed" data-eid="<%= id %>" id="entity<%= id %>">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Type</th>
+            <th>Baseline</th>
+            <th>Hash</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% _.each(properties, function (p) { %>
+        <tr>
+            <td><%= p.name %></td>
+            <td id="e<%= id %>p<%= p.hash %>b<%= p.baseline %>"><%= p.value %></td>
+            <td style="text-align: center;"><%= p.type %></td>
+            <td style="text-align: center;"><%= p.baseline %></td>
+            <td style="text-align: right;"><%= p.hash %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

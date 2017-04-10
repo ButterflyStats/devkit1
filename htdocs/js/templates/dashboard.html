@@ -1,0 +1,139 @@
+<div class="col-wrapper-pad">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-wrapper">
+                <div class="row">
+                    <div class="col-md-2">
+                        <strong>Match ID</strong>
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Game Mode</strong>
+                    </div>
+                    <div class="col-md-2">
+                        <strong>League</strong>
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Length</strong>
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Played On</strong>
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Summary</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <%= id %>
+                    </div>
+                    <div class="col-md-2">
+                        <%= mode %>
+                    </div>
+                    <div class="col-md-2">
+                        <%= league %>
+                    </div>
+                    <div class="col-md-2">
+                        <%= duration %>
+                    </div>
+                    <div class="col-md-2">
+                        <%= date %>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#">View on Yasp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="col-wrapper">
+                <div class="row">
+                    <!-- Header -->
+                    <div class="col-md-12">
+                        <strong>Radiant</strong>
+                    </div>
+                    <div class="col-md-12" style="text-align: center;">
+                    <% _.each(radiant, function(player) { %><img style="padding: 5px; height: 60px;" src="assets/sprites/heroes/<%=player.hero%>.png" /><% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-wrapper">
+                <div class="row">
+                    <!-- Header -->
+                    <div class="col-md-12">
+                        <strong>Dire</strong>
+                    </div>
+                    <div class="col-md-12" style="text-align: center;">
+                    <% _.each(dire, function(player) { %><img style="padding: 5px; height: 60px;" src="assets/sprites/heroes/<%=player.hero%>.png" /><% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-wrapper">
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong>Recent Changes</strong>
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Planned Features</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <br />
+                        <p><u>Parser:</u><br />
+                             - Added support for Dota 7.00 / 7.01
+                             - Lots of small bugfixes
+                        </p>
+                        <p><u>UI:</u><br />
+                             - Fixed multiple missing images
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <br />
+                        <p><u>Devkit:</u><br />
+                             - Fix performance issues (e.g. laggy audio, interface)
+                        </p>
+                        <p><u>Broadcaster:</u><br />
+                             - Multi channel support<br />
+                             - Use bicubic instead of linear interpolation
+                        </p>
+                        <p><u>Dashboard:</u><br />
+                             - End Of Match-Overview
+                        </p>
+                        <p><u>Map:</u><br />
+                             - Support browser resizing<br />
+                             - Render current heroes when loading tab<br />
+                             - Write renderer directly in WebGL to make it actually useable
+                        </p>
+                        <p><u>Graphs:</u><br />
+                             - Implement team colors
+                        </p>
+                        <p><u>Combatlog:</u><br />
+                             - Implement combatlog viewer
+                        </p>
+                        <p><u>Entities:</u><br />
+                             - Redesign entity viewer<br />
+                             - Keep entities open when switching Tabs
+                        </p>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-12" style="font-size: 10px;">
+                        <span class="pull-left">Devkit Public Build #5 - 23.12.2016</span>
+                        <span class="pull-right">Copyright 2016 d2playback, All Rights Reserved</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

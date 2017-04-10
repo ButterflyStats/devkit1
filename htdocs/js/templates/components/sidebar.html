@@ -1,0 +1,10 @@
+<li class="sidebar-img">
+    <img src="img/person.jpg" width=60 height=60 class="img-circle" />
+</li>
+
+<% _.each(pages, function(page) { %>
+    <li id="sb-<%= page.target %>" class="sb-link" data-target="<%= page.target %>">
+        <span class="img fa fa-<%= page.icon %>"></span>
+        <span class="txt"><%= page.name %></span>
+    </li>
+<% }) %>

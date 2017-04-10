@@ -1,0 +1,9 @@
+<% _.each(items, function (e) { %>
+    <li data-ename="<%= e.class %>">
+        <div class="ent", data-eid="<%= e.id %>">
+            <span class="item-id">#<%= e.id %></span>
+            <span><%= e.class %></span>
+            <span class="item-pin pull-right"><i class="fa fa-plus" aria-hidden="true"></i></span>
+        </div>
+    </li>
+<% }); %>

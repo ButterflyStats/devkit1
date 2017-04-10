@@ -1,0 +1,53 @@
+<div class="col-wrapper-pad" id="audio">
+
+<div class="row">
+    <% if (channels.length == 0) { %>
+    <div class="col-md-12">
+        <div class="col-wrapper">
+            <div class="row">
+                <!-- Header -->
+                <div class="col-md-12">
+                    <strong>Broadcaster Channels</strong>
+                </div>
+                <div class="col-md-12">
+                    No broadcasters available in the current replay.
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+    <div class="col-md-6">
+        <div data-target="-1" class="col-wrapper aselect" <% if (active == -1) { %> style="border: 1px solid grey;" <% } else { %> style="border: 1px solid white;" <% } %> >
+            <div class="row">
+                <!-- Header -->
+                <div class="col-md-12">
+                    <strong>None</strong>
+                </div>
+                <div class="col-md-12">
+                    Select to disable audio.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% _.each(channels, function (c) { %>
+    <div class="col-md-6">
+        <div data-target="<%=c.id%>" class="col-wrapper aselect" <% if (c.id == active) { %> style="border: 1px solid grey;" <% } else { %> style="border: 1px solid white;" <% } %> >
+            <div class="row">
+                <!-- Header -->
+                <div class="col-md-12">
+                    <strong><%= c.description %></strong><img class="pull-right" src="assets/flags/<%= c.country %>.png" />
+                </div>
+                <div class="col-md-12">
+                    <% _.each(c.casters, function (c2) { %>
+                        <%= c2.name %>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% }); %>
+</div>
+
+</div>

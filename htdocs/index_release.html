@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Title -->
+  <title>Butterfly - Development Tool</title>
+
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="description" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div id="message">
+        Minimum screen width: 1020px
+    </div>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <!-- filled by components/sidebar -->
+            <ul id="sidebar-nav"></ul>
+
+            <!-- filled by components/controls -->
+            <div id="sidebar-controls"></div>
+        </div>
+
+        <!-- Page Content -->
+        <div id="content"></div>
+
+        <!-- Play-Bar -->
+        <div id="controls"></div>
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- #upload_wrapper -->
+    <div id="upload_wrapper" class="lato">
+        <i class="fa fa-cloud-upload upload-ele" aria-hidden="true"></i>
+        <h2>Butterfly - Devkit</h2>
+        <p>Click or Drag'n Drop a <a href="#" data-toggle="modal" data-target="#replayModal">Dota 2 Demo</a> here</p>
+    </div>
+    <!-- /#upload_wrapper -->
+
+    <!-- #loading -->
+    <div id="loading">
+        <div class="sk-folding-cube">
+          <div class="sk-cube1 sk-cube"></div>
+          <div class="sk-cube2 sk-cube"></div>
+          <div class="sk-cube4 sk-cube"></div>
+          <div class="sk-cube3 sk-cube"></div>
+        </div>
+        <div id="loading-prog">&nbsp;</div>
+        <span id="loading-ptext"></span>
+    </div>
+    <!-- /#loading -->
+
+    <div class="modal" id="replayModal" tabindex="-1" role="dialog" aria-labelledby="replayModalLbl" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="replayModalLbl">Dota 2 Demos</h4>
+          </div>
+          <div class="modal-body">
+            <strong>What are Demos?</strong>
+            <p>Demos contain the information required to re-play a match of Dota in the client.</p>
+
+            <strong>Where can I aquire a Demo?</strong>
+            <p>All Demos are saved in your Dota 2 replay folder. Use the form below to find the default location for your operating system.</p>
+            <div class="input-group" style="width: 500px; margin: 0px auto; margin-bottom: 10px;">
+                <div class="input-group-btn" role="group">
+                    <button type="button" data-path="C:\Program Files (x86)\Steam\SteamApps\common\dota 2 beta\dota\replays" class="active btn btn-default btn-path"><i class="fa fa-windows fa-lg"></i></button>
+                    <button type="button" data-path="/Users/<You>/Library/Application Support/Steam/SteamApps/dota 2 beta/dota/replays" class="btn btn-default btn-path"><i class="fa fa-apple fa-lg"></i></button>
+                    <button type="button" data-path="/home/<You>/.steam/steam/SteamApps/dota 2 beta/dota/replays" class="btn btn-default btn-path"><i class="fa fa-linux fa-lg"></i></button>
+                </div>
+              <input value="C:\Program Files (x86)\Steam\SteamApps\common\dota 2 beta\dota\replays" type="text" id="path-target" class="form-control" onClick="this.select();">
+            </div>
+
+            <strong>Is the demo uploaded?</strong>
+            <p>No, everything is parsed in your browser.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <script data-main="js/main-built" src="node_modules/requirejs/require.js"></script>
+</body>
+</html>

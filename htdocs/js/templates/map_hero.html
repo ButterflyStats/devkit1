@@ -1,0 +1,34 @@
+<table class="htable">
+    <tbody>
+        <tr>
+            <!-- Hero image -->
+            <td class="himg">
+                <img src="assets/sprites/heroes/<%= hero %>.png" />
+            </td>
+            <td>
+                <span class="hname"><%= info["name"] %></span>
+                <span class="hlvl">L <%= props["m_iCurrentLevel"].value %></span>
+                <div style="font-size: 0px; clear: both; margin-bottom: 15px;">&nbsp;</div>
+                <div>
+                    <span class="hhealth"><span class="bar" style="width: <%= healthp %>%">&nbsp;</span></span>
+                    <span class="healthtxt"><%= props["m_iMaxHealth"].value %></span>
+                </div>
+                <div>
+                    <span class="hmana"><span class="bar" style="width: <%= manap %>%"></span></span>
+                    <span class="manatxt"><%= Math.floor(parseFloat(props["m_flMaxMana"].value)) %></span>
+                </div>
+            </td>
+            <td style="width: 158px; vertical-align: top;">
+                <span class="hitemrow">
+                    <% _.each(info["items"], function(s, i) { %>
+                    <% if (i == 3) { %>
+                    </span>
+                    <span class="hitemrow">
+                    <% } %>
+                    <span class="item"><img src="assets/sprites/items/<%= s.substr(5) %>.png" /></span>
+                    <% }); %>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
