@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+htdocs/js/butterfly/devkit.js
+htdocs/js/butterfly/devkit.js.mem
+htdocs/.sass-cache/
+htdocs/css/app.css
+htdocs/css/app.css.map
+htdocs/js/main-built.js
+release
+.sass-cache/
