@@ -1,12 +1,17 @@
 BF devkit
 =========
 
-Essentally the full source code to devkit.d2playback.com, minus the audio decoding.
+Essentially the full source code to devkit.d2playback.com, minus the audio decoding.
 
 I would not recommend building or adding to this project because most of the code is rather slow and I've only written this
 to help me personally work better with replays.
 
 Considering looking at the heavily unfinished `devkit2` project to get a better starting point.
+
+Project status
+==============
+
+I won't work on this anymore, feel free to write me a mail if you want to take over.
 
 License
 =======
